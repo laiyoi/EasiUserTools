@@ -9,6 +9,8 @@
 
 - 向`./targets`中添加图片，文件名为期望的用户名
 - 运行`main.py`
+- 效果如下
+ ![image](/assets/preview.png "效果预览")
 ---
 
 ## 安装
