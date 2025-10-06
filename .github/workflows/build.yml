@@ -18,12 +18,8 @@ jobs:
         with:
           python-version: '3.10'
 
-
-      - name: Install uv (official action)
-        uses: astral-sh/uv-action@v1
-
-      - name: Install dependencies with uv sync
-        run: uv sync
+      - name: Install dependencies 
+        run: pip install uv && uv sync
 
       - name: Install PyInstaller
         run: uv pip install pyinstaller
