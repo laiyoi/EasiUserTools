@@ -25,7 +25,7 @@ jobs:
         run: uv pip install pyinstaller
 
       - name: Build exe with PyInstaller
-        run: uv pip run pyinstaller --onefile main.py
+        run: python -m pyinstaller --onefile main.py
 
       - name: Upload exe artifact
         uses: actions/upload-artifact@v4
