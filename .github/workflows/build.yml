@@ -24,7 +24,7 @@ jobs:
       - name: Build exe with PyInstaller
         run: |
           .venv\Scripts\activate.ps1 &&
-          uv pip install pyinstaller
+          uv pip install pyinstaller &&
           pyinstaller --onefile main.py
         shell: pwsh
 
