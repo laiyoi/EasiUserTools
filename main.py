@@ -14,7 +14,6 @@ class User(SQLModel, table=True):
 
 
 def add_user_from_images(image_folder: str):
-    username = os.getlogin()
     roaming = Path(os.environ["APPDATA"])
     db_path = roaming / "Seewo" / "Users" / "User.db"
     data_root = roaming / "Seewo" / "EasiNote5" / "Data"
@@ -81,5 +80,6 @@ def add_user_from_images(image_folder: str):
 
 
 if __name__ == "__main__":
-    image_folder = r"./targets"  # TODO: 修改为图片路径
+    image_folder = r"./targets"
+    assert Path(image_folder).exists(), "❌ targets 文件夹不存在，请创建后添加图片"
     add_user_from_images(image_folder)
