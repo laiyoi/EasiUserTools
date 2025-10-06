@@ -7,21 +7,19 @@
 
 ## 使用方法
 
+### 从二进制文件使用
+
+- 下载`Actions`页面中最新的产物
+- 向`targets`文件夹中添加需要的图片，文件名为期望的用户名
+- 运行`main.exe`
+
+### 从源码使用
+
 - 向`./targets`中添加图片，文件名为期望的用户名
 - 运行`main.py`
 - 效果如下
  ![image](/assets/preview.png "效果预览")
 ---
-
-## 安装
-
-1. 克隆仓库：
-
-```bash
-git clone https://github.com/yourusername/EasiUserTools.git
-cd EasiUserTools
-uv sync
-```
 
 ## TODO List
 
