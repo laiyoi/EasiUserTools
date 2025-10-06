@@ -23,13 +23,15 @@ jobs:
 
       - name: Build exe with PyInstaller
         run: |
-          .venv\Scripts\activate.ps1 &&
-          uv pip install pyinstaller &&
+          .venv\Scripts\activate.ps1
+          uv pip install pyinstaller
           pyinstaller --onefile main.py
+          cp .\Configs.fkv .\dist
+          mkdir .\dist\targets
         shell: pwsh
 
       - name: Upload exe artifact
         uses: actions/upload-artifact@v4
         with:
           name: EasiUserTools-exe
-          path: dist/main.exe
+          path: dist/
